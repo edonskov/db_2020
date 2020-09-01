@@ -1,6 +1,8 @@
 package com.deutsche;
 
 import demo.Person;
+import homework.DynamicIntegerArray;
+import homework.DynamicIntegerArrayImpl;
 
 /**
  * @author Evgeny Borisov
@@ -8,7 +10,11 @@ import demo.Person;
 public class Main {
 
     public static void main(String[] args) {
-        var person = new Person("asd",12);
-        System.out.println(person);
+
+        DynamicIntegerArrayImpl dynamicIntegerArray = new DynamicIntegerArrayImpl();
+        dynamicIntegerArray.size();
+        dynamicIntegerArray.add(6);
+        System.out.println(dynamicIntegerArray.get(4));
+
     }
 }
