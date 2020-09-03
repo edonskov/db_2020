@@ -2,7 +2,7 @@ package homework.enums;
 
 import java.util.Arrays;
 
-public enum httpCodes {
+public enum HttpCodes {
     Informational(100, 199),
     Success(200, 299),
     Redirection(300, 399),
@@ -13,7 +13,7 @@ public enum httpCodes {
     private final int max;
 
 
-    private httpCodes(int min, int max) {
+    private HttpCodes(int min, int max) {
         this.min = min;
         this.max = max;
     }
@@ -22,7 +22,7 @@ public enum httpCodes {
         return String.format("%d,%d", min, max);
     }
 
-    public static httpCodes get(int val) {
+    public static HttpCodes get(int val) {
         return Arrays.stream(values())
                 .filter(r -> val >= r.min && val <= r.max)
                 .findFirst()
